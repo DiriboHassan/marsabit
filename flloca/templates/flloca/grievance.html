@@ -1,0 +1,20 @@
+{% extends 'base2_flloca.html' %}
+{% block title %} Steps In Loadging Grievances {% endblock %}
+{% block content %}
+<br><br><br><br><br>
+<h2 style="text-align: center;">{{ category_name }}</h2>
+    {% for grievance in grievances %}
+         <div class="container">
+        <div class="file-card">
+            <div class="file-info">
+                <h3 style="text-align: center;">{{grievance.title|safe}}</h3>
+                <p>{{grievance.grievances|safe}}</p>
+            </div>
+           
+        </div>
+
+    </div>
+    {% empty %}
+        <p style="text-align: center;">No documents available in this category.</p>
+    {% endfor %}
+{% endblock %}

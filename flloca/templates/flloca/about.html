@@ -1,0 +1,65 @@
+{% extends 'base2_flloca.html' %}
+{% load static %}
+{% block content %}
+<br><br><br>
+ <!-- About Start -->
+      {% for intro in intros %}
+    <div class="container-xxl py-5">
+        
+        <div class="container">
+            <div class="row g-5">
+                
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
+                   
+                    <h6 class="section-title bg-white text-start text-primary pe-3">Welcome to the County Government Of Marsabit - Climate Change.</h6>
+                    <h1 class="mb-4"><span class="text-primary">{{intro.name}}</span></h1>
+                    <p class="mb-4">{{intro.intro | safe}}</p>
+                    
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <a href="https://www.facebook.com/marsabitcountyg"><p class="mb-0"><i class="fab fa-facebook-f fw-normal"></i>  Facebook</p></a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="https://x.com/GovMohamudAli"> <p class="mb-0"><i class="fab fa-twitter fw-normal"></i>  Twitter</p></a>
+                        </div> 
+                         </div>
+        </div>  
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+{% endfor %}
+
+    
+   <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Heads Of Department</h6>
+                <h1 class="mb-5">Department of Water, Environment, Climate Change, NRM, Forestry and Wildlife.</h1>
+            </div>
+            <div class="row g-4">
+                {% for executives in executives %}
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{{executives.img.url}}" alt="" style="width: 100%; max-height:280px; object-fit:cover;">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                            <a href="{{executives.facebook}}" class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href="{{executives.twitter}}" class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">{{executives.name}}</h5>
+                            <b>{{executives.title}}</b>
+                        </div>
+                        
+                    </div>
+                    </div>
+                   
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+        
+{% endblock %}
