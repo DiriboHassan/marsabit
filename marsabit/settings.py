@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-x(pc3w2p@(&8=7s84_4br#=96+r0cf%d-^vi%bvgk2e!me#h2m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -90,11 +90,8 @@ DATABASES = {
         'NAME': 'mbt_county',
         'USER': 'diribo_mbt',
         'PASSWORD': 'mbt_010@25',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-         'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'",
-    }}
+        
+        }
 }
 
 
